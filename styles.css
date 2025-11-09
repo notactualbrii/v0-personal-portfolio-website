@@ -149,6 +149,42 @@ body {
   border: 1px solid #2d4a7b;
 }
 
+/* Added hero-no-image layout for single column hero without profile picture */
+.hero-no-image {
+  grid-template-columns: 1fr;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero-text-full {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-text-full h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-light-dark);
+}
+
+.hero-text-full .subtitle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-text-full .description {
+  font-size: 1.2rem;
+  color: var(--text-light-dark);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.hero-text-full .hero-buttons {
+  justify-content: center;
+}
+
 .hero-text h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -1410,6 +1446,22 @@ body {
 
   .hero {
     grid-template-columns: 1fr;
+  }
+
+  .hero-no-image {
+    padding: 2rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .hero-text-full h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .hero-text-full .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-text-full .description {
+    font-size: 1rem;
   }
 
   .project-card {
