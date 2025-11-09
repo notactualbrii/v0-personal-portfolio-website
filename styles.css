@@ -315,6 +315,14 @@ body {
   margin-top: 2rem;
 }
 
+/* Updated options grid to display all 4 items in a single row */
+.options-grid-single-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
 .option-card {
   background: rgba(42, 26, 15, 0.6);
   border: 2px solid var(--restaurant-border);
@@ -1145,6 +1153,54 @@ body {
   line-height: 1.6;
 }
 
+/* Added learnings section with grid box layout */
+.learnings-section {
+  margin: 3rem 0;
+  padding: 3rem 2rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid #2d4a7b;
+}
+
+.learnings-section h2 {
+  font-size: 2rem;
+  color: var(--text-light-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.learnings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.learning-box {
+  background: linear-gradient(135deg, #1a3a52, #0f2540);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #2d4a7b;
+  transition: var(--transition);
+}
+
+.learning-box:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 16px rgba(20, 184, 166, 0.2);
+  transform: translateY(-5px);
+}
+
+.learning-box h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.learning-box p {
+  color: #a8d5e5;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
 /* Social section */
 .social-section {
   margin: 3rem 0;
@@ -1373,6 +1429,15 @@ body {
 
   .competencies-grid-single-row {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Added responsive layout for service options and learnings */
+  .options-grid-single-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .learnings-grid {
+    grid-template-columns: 1fr;
   }
 
   .timeline-wrapper {
