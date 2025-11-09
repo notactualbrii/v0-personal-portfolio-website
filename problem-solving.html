@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Transformation Case Study - Briana Gheorghe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">BG</div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="skills.html" class="nav-link">Skills & Certificates</a></li>
+                <li><a href="showcase.html" class="nav-link">Project Showcase</a></li>
+                <li><a href="problem-solving.html" class="nav-link active">Case Study</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h1>Digital Transformation Case Study</h1>
+            <p>Restaurant Industry: From Manual Operations to Data-Driven Decisions</p>
+        </section>
+
+        <!-- Restaurant Showcase Container -->
+        <div class="restaurant-showcase-container">
+            <div class="restaurant-showcase-header">
+                <h2 style="color: var(--restaurant-accent);">Welcome to Verde & Table</h2>
+                <p style="color: var(--restaurant-text-light);">Premium Fine Dining Experience</p>
+            </div>
+
+            <!-- Food Carousel Section -->
+            <section class="carousel-section restaurant-section">
+                <h2>Featured Dishes</h2>
+                <div class="carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" id="prevBtn" aria-label="Previous slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="carousel-container" id="carouselContainer">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=300&h=300&fit=crop" alt="Signature Pasta">
+                                <h3>Signature Pasta</h3>
+                                <p>£18.50</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop" alt="Grilled Salmon">
+                                <h3>Grilled Salmon</h3>
+                                <p>£24.00</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&h=300&fit=crop" alt="Prime Beef Steak">
+                                <h3>Prime Beef Steak</h3>
+                                <p>£28.50</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=300&fit=crop" alt="Chocolate Decadence">
+                                <h3>Chocolate Decadence</h3>
+                                <p>£9.50</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://images.unsplash.com/photo-1476124369162-f4978d1a23bd?w=300&h=300&fit=crop" alt="Wild Mushroom Risotto">
+                                <h3>Wild Mushroom Risotto</h3>
+                                <p>£16.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" id="nextBtn" aria-label="Next slide">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Service Options Section -->
+            <section class="service-options restaurant-section">
+                <h2>How Would You Like to Enjoy Our Food?</h2>
+                <div class="options-grid">
+                    <div class="option-card" onclick="toggleOption(this, 'dine-in')">
+                        <div class="option-icon">🍽️</div>
+                        <h3>Dine In</h3>
+                        <p>Experience our intimate dining atmosphere with professional service</p>
+                    </div>
+                    <div class="option-card" onclick="toggleOption(this, 'delivery')">
+                        <div class="option-icon">🚗</div>
+                        <h3>Delivery</h3>
+                        <p>Enjoy our meals delivered hot to your doorstep within 45 minutes</p>
+                    </div>
+                    <div class="option-card" onclick="toggleOption(this, 'collection')">
+                        <div class="option-icon">📦</div>
+                        <h3>Collection</h3>
+                        <p>Pick up your order at your convenience, perfectly packaged</p>
+                    </div>
+                    <div class="option-card" onclick="toggleOption(this, 'cook-home')">
+                        <div class="option-icon">👨‍🍳</div>
+                        <h3>Cook at Home</h3>
+                        <p>Premium ingredients kit with recipes to create our dishes at home</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Menu Section -->
+            <section id="menu" class="menu-section restaurant-section">
+                <h2>Our Menu</h2>
+                <div class="menu-tabs">
+                    <button class="menu-tab active" onclick="switchMenuCategory(event, 'starters')">Starters</button>
+                    <button class="menu-tab" onclick="switchMenuCategory(event, 'mains')">Main Courses</button>
+                    <button class="menu-tab" onclick="switchMenuCategory(event, 'sides')">Sides</button>
+                    <button class="menu-tab" onclick="switchMenuCategory(event, 'desserts')">Desserts</button>
+                </div>
+
+                <div id="starters" class="menu-category active">
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Bruschetta">
+                        <div class="menu-details">
+                            <h3>Bruschetta al Pomodoro</h3>
+                            <p>Toasted bread with fresh tomatoes, garlic, and basil</p>
+                            <span class="price">£8.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Shrimp">
+                        <div class="menu-details">
+                            <h3>Pan-Seared Shrimp</h3>
+                            <p>Succulent shrimp with garlic and white wine sauce</p>
+                            <span class="price">£12.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mains" class="menu-category">
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Pasta">
+                        <div class="menu-details">
+                            <h3>Pasta Carbonara</h3>
+                            <p>Traditional Italian pasta with creamy sauce and pancetta</p>
+                            <span class="price">£18.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Salmon">
+                        <div class="menu-details">
+                            <h3>Pan-Roasted Salmon</h3>
+                            <p>Fresh salmon with seasonal vegetables and lemon butter</p>
+                            <span class="price">£24.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sides" class="menu-category">
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Fries">
+                        <div class="menu-details">
+                            <h3>Truffle Fries</h3>
+                            <p>Hand-cut fries with truffle oil and sea salt</p>
+                            <span class="price">£6.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Spinach">
+                        <div class="menu-details">
+                            <h3>Creamed Spinach</h3>
+                            <p>Fresh spinach in a delicate cream sauce</p>
+                            <span class="price">£5.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="desserts" class="menu-category">
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Cake">
+                        <div class="menu-details">
+                            <h3>Chocolate Lava Cake</h3>
+                            <p>Warm chocolate cake with molten center and vanilla ice cream</p>
+                            <span class="price">£9.50</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Tiramisu">
+                        <div class="menu-details">
+                            <h3>Tiramisu</h3>
+                            <p>Classic Italian dessert with mascarpone and espresso</p>
+                            <span class="price">£8.50</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Offers & Deals Section -->
+            <section class="offers-section restaurant-section">
+                <h2>Special Offers & Deals</h2>
+                <div class="offers-grid">
+                    <div class="offer-card">
+                        <div class="offer-badge">Special</div>
+                        <img src="/placeholder.svg?height=200&width=300" alt="Happy Hour">
+                        <h3>Happy Hour</h3>
+                        <p>20% off all drinks and appetizers</p>
+                        <p class="offer-time">Monday - Friday: 5:00 PM - 6:30 PM</p>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-badge">Save</div>
+                        <img src="/placeholder.svg?height=200&width=300" alt="Meal Deal">
+                        <h3>Early Bird Menu</h3>
+                        <p>3-course meal at 30% discount before 7:00 PM</p>
+                        <p class="offer-time">Tuesday - Thursday</p>
+                    </div>
+                    <div class="offer-card">
+                        <div class="offer-badge">Limited</div>
+                        <img src="/placeholder.svg?height=200&width=300" alt="Brunch">
+                        <h3>Weekend Brunch</h3>
+                        <p>Unlimited prosecco with any brunch dish</p>
+                        <p class="offer-time">Saturday - Sunday: 10:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Find Restaurant & Location Search -->
+            <section class="location-search-section restaurant-section">
+                <h2>Find Verde & Table Locations</h2>
+                <div class="location-search">
+                    <input type="text" id="locationInput" placeholder="Search by postcode, town, or city" class="location-input">
+                    <button class="btn btn-primary" onclick="searchLocation()">Search</button>
+                    <button class="btn btn-secondary" onclick="getCurrentLocation()">📍 Use Current Location</button>
+                </div>
+                <div id="locationResults" class="location-results">
+                    <div class="location-card">
+                        <h3>Verde & Table - Manchester</h3>
+                        <p>42 King Street, Manchester, M2 4HQ</p>
+                        <p>Phone: +44 161 555 0123</p>
+                        <p>Open: 12:00 PM - 11:00 PM</p>
+                        <button class="btn btn-small" onclick="alert('Distance: 0.5 km from your search')">Get Directions</button>
+                    </div>
+                    <div class="location-card">
+                        <h3>Verde & Table - Salford</h3>
+                        <p>158 Chapel Street, Salford, M3 5EA</p>
+                        <p>Phone: +44 161 555 0124</p>
+                        <p>Open: 12:00 PM - 11:00 PM</p>
+                        <button class="btn btn-small" onclick="alert('Distance: 2.3 km from your search')">Get Directions</button>
+                    </div>
+                    <div class="location-card">
+                        <h3>Verde & Table - Stockport</h3>
+                        <p>95 Market Street, Stockport, SK1 1RB</p>
+                        <p>Phone: +44 161 555 0125</p>
+                        <p>Open: 12:00 PM - 10:30 PM</p>
+                        <button class="btn btn-small" onclick="alert('Distance: 5.8 km from your search')">Get Directions</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Book a Table Section -->
+            <section id="booking" class="booking-section restaurant-section">
+                <h2>Book Your Table at Verde & Table</h2>
+                <form class="restaurant-booking-form" id="restaurantBookingForm">
+                    <div class="booking-form-grid">
+                        <div class="form-group">
+                            <label for="restaurantName">Name *</label>
+                            <input type="text" id="restaurantName" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="restaurantEmail">Email *</label>
+                            <input type="email" id="restaurantEmail" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="restaurantPhone">Phone *</label>
+                            <input type="tel" id="restaurantPhone" required placeholder="+44 7449 383899">
+                        </div>
+                        <div class="form-group">
+                            <label for="restaurantDate">Date *</label>
+                            <input type="date" id="restaurantDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="restaurantTime">Time *</label>
+                            <select id="restaurantTime" required>
+                                <option value="">Select Time</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="12:30">12:30 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="restaurantGuests">Number of Guests *</label>
+                            <select id="restaurantGuests" required>
+                                <option value="">Select Guests</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                                <option value="7">7 Guests</option>
+                                <option value="8">8+ Guests</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="restaurantNotes">Special Requests</label>
+                        <textarea id="restaurantNotes" placeholder="Any dietary requirements or special occasions?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Reserve Table</button>
+                </form>
+                <div id="bookingConfirmation" class="booking-confirmation" style="display:none;">
+                    <p id="bookingMessage"></p>
+                </div>
+            </section>
+        </div>
+        <!-- End of restaurant showcase container -->
+
+        <!-- Original Case Study Section -->
+        <section class="case-study-section">
+            <div class="case-study-container">
+                <div class="case-study-intro">
+                    <h2>The Challenge</h2>
+                    <p>A busy restaurant chain struggled with manual reservation systems, inconsistent customer data, and limited insights into peak service times and customer preferences. This resulted in operational inefficiencies, missed revenue opportunities, and poor customer experience.</p>
+                    <img src="/placeholder.svg?height=300&width=500" alt="Restaurant Challenge">
+                </div>
+
+                <div class="case-study-solution">
+                    <h2>The Solution</h2>
+                    <p>Developed an integrated digital booking system with analytics dashboard to track customer behavior, peak times, and preferences. This enabled data-driven decision-making and improved operational efficiency.</p>
+                    <img src="/placeholder.svg?height=300&width=500" alt="Booking System Solution">
+                </div>
+
+                <div class="case-study-results">
+                    <h2>Key Results & Impact</h2>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <h4>35% Increase</h4>
+                            <p>In booking efficiency through automation</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>45% Improvement</h4>
+                            <p>In customer experience and satisfaction</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>60% Growth</h4>
+                            <p>In data-driven operational insights</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Real-time Analytics</h4>
+                            <p>For peak time management and staffing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="technologies-used">
+                    <h2>Technologies & Skills Utilized</h2>
+                    <div class="tech-list">
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">Business Intelligence</span>
+                        <span class="tech-tag">Process Optimization</span>
+                        <span class="tech-tag">Customer Analytics</span>
+                        <span class="tech-tag">Strategic Planning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learnings-section">
+            <h2>Key Learnings & Takeaways</h2>
+            <div class="learnings-content">
+                <div class="learning-item">
+                    <h3>Digital Transformation Requires Change Management</h3>
+                    <p>Success isn't just about implementing new technology—it's about ensuring staff adoption and managing the transition effectively.</p>
+                </div>
+                <div class="learning-item">
+                    <h3>Data Drives Better Decisions</h3>
+                    <p>Access to real-time analytics enables managers to make informed decisions quickly and adapt to changing customer demands.</p>
+                </div>
+                <div class="learning-item">
+                    <h3>Customer Experience is Paramount</h3>
+                    <p>Technology solutions must ultimately improve the customer journey, not just streamline backend operations.</p>
+                </div>
+                <div class="learning-item">
+                    <h3>Integration is Critical</h3>
+                    <p>Connecting different systems creates a unified view of operations and prevents data silos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Briana Gheorghe. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/brianagheorghe512" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:gheorghebriana5@gmail.com">Email</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
