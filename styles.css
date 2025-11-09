@@ -1247,10 +1247,10 @@ body {
   height: 20px;
 }
 
-/* LinkedIn profile button with green background */
+/* Updated LinkedIn profile button to match Send Message button styling */
 .linkedin-profile-button {
   display: inline-block;
-  background: var(--success-color);
+  background: var(--primary-color);
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
@@ -1260,9 +1260,9 @@ body {
 }
 
 .linkedin-profile-button:hover {
-  background: #059669;
+  background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 6px 12px rgba(20, 184, 166, 0.3);
 }
 
 /* Contact section two-column layout */
