@@ -1197,7 +1197,7 @@ body {
 
 .learning-box p {
   color: #a8d5e5;
-  font-size: 1rem;
+  font-size: 1.0rem;
   line-height: 1.7;
 }
 
@@ -1247,11 +1247,11 @@ body {
   height: 20px;
 }
 
-/* Updated LinkedIn profile button to match Send Message button styling */
+/* Updated LinkedIn profile button to ensure white text is always visible */
 .linkedin-profile-button {
   display: inline-block;
   background: var(--primary-color);
-  color: white;
+  color: white !important;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   text-decoration: none;
@@ -1261,6 +1261,7 @@ body {
 
 .linkedin-profile-button:hover {
   background: var(--primary-dark);
+  color: white !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(20, 184, 166, 0.3);
 }
