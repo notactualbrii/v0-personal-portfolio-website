@@ -149,7 +149,6 @@ body {
   border: 1px solid #2d4a7b;
 }
 
-/* Added hero-no-image layout for single column hero without profile picture */
 .hero-no-image {
   grid-template-columns: 1fr;
   text-align: center;
@@ -319,7 +318,6 @@ body {
   color: #a8d5e5;
 }
 
-/* Restaurant container styles */
 .restaurant-showcase-container {
   border: 3px solid var(--restaurant-border);
   border-radius: 16px;
@@ -343,7 +341,6 @@ body {
   font-family: "Georgia", serif !important;
 }
 
-/* Added options grid styling for restaurant service options */
 .options-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -351,7 +348,6 @@ body {
   margin-top: 2rem;
 }
 
-/* Updated options grid to display all 4 items in a single row */
 .options-grid-single-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -392,7 +388,6 @@ body {
   line-height: 1.6;
 }
 
-/* Added menu section styling with proper grid layout */
 .menu-section {
   margin: 2rem 0;
 }
@@ -483,7 +478,6 @@ body {
   font-family: "Georgia", serif;
 }
 
-/* Added offers grid styling */
 .offers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -546,7 +540,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Added location search styling with proper grid */
 .location-search {
   display: flex;
   gap: 1rem;
@@ -623,7 +616,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Carousel styles with brown buttons */
 .carousel-section {
   margin: 3rem 0;
 }
@@ -682,7 +674,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Skills grid */
 .skills-section {
   margin: 3rem 0;
 }
@@ -733,7 +724,6 @@ body {
   transition: width 0.6s ease;
 }
 
-/* Certificates in single row */
 .certificates-section {
   margin: 3rem 0;
 }
@@ -768,6 +758,7 @@ body {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
 }
 
 .certificate-card h3 {
@@ -794,7 +785,6 @@ body {
   margin: 1rem;
 }
 
-/* New education timeline with glow effect */
 .education-section {
   margin: 3rem 0;
 }
@@ -861,7 +851,6 @@ body {
   transform: translateX(8px);
 }
 
-/* Updated timeline education card to have glow outline on hover */
 .timeline-education-card ul {
   color: #a8d5e5;
   margin-left: 1.5rem;
@@ -905,7 +894,6 @@ body {
   margin-top: 1rem;
 }
 
-/* Experience timeline */
 .experience-section {
   margin: 3rem 0;
 }
@@ -967,7 +955,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Projects */
 .projects-section {
   display: flex;
   flex-direction: column;
@@ -1050,7 +1037,6 @@ body {
   border: 1px solid #2d4a7b;
 }
 
-/* Added case study box styling for better layout */
 .case-study-box {
   background: var(--bg-secondary);
   border: 2px solid #2d4a7b;
@@ -1141,7 +1127,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Competencies in single row */
 .competencies-section {
   background: var(--bg-secondary);
   padding: 3rem 2rem;
@@ -1189,7 +1174,6 @@ body {
   line-height: 1.6;
 }
 
-/* Added learnings section with grid box layout */
 .learnings-section {
   margin: 3rem 0;
   padding: 3rem 2rem;
@@ -1233,11 +1217,10 @@ body {
 
 .learning-box p {
   color: #a8d5e5;
-  font-size: 1.0rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
-/* Social section */
 .social-section {
   margin: 3rem 0;
   padding: 2rem;
@@ -1283,7 +1266,6 @@ body {
   height: 20px;
 }
 
-/* Updated LinkedIn profile button to ensure white text is always visible */
 .linkedin-profile-button {
   display: inline-block;
   background: var(--primary-color);
@@ -1302,7 +1284,6 @@ body {
   box-shadow: 0 6px 12px rgba(20, 184, 166, 0.3);
 }
 
-/* Contact section two-column layout */
 .contact-section {
   margin: 3rem 0;
 }
@@ -1389,7 +1370,6 @@ body {
   min-height: 120px;
 }
 
-/* Footer */
 .footer {
   background: var(--bg-secondary);
   color: var(--text-light-dark);
@@ -1422,7 +1402,6 @@ body {
   color: var(--primary-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -1449,11 +1428,11 @@ body {
   }
 
   .hero-no-image {
-    padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    padding: 2rem 1rem;
   }
 
   .hero-text-full h1 {
-    font-size: 2.5rem; /* Adjust font size for smaller screens */
+    font-size: 2.5rem;
   }
 
   .hero-text-full .subtitle {
@@ -1484,7 +1463,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Added responsive layout for service options and learnings */
   .options-grid-single-row {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1498,7 +1476,6 @@ body {
   }
 }
 
-/* Animations */
 @keyframes slideIn {
   from {
     opacity: 0;
