@@ -307,6 +307,278 @@ body {
   font-family: "Georgia", serif !important;
 }
 
+/* Added options grid styling for restaurant service options */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.option-card {
+  background: rgba(42, 26, 15, 0.6);
+  border: 2px solid var(--restaurant-border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.option-card:hover {
+  background: rgba(42, 26, 15, 0.9);
+  border-color: var(--restaurant-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(201, 169, 97, 0.3);
+}
+
+.option-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.option-card h3 {
+  color: var(--restaurant-accent);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.option-card p {
+  color: var(--restaurant-text-light);
+  line-height: 1.6;
+}
+
+/* Added menu section styling with proper grid layout */
+.menu-section {
+  margin: 2rem 0;
+}
+
+.menu-tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.menu-tab {
+  background: var(--restaurant-bg);
+  border: 2px solid var(--restaurant-border);
+  color: var(--restaurant-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 600;
+  font-family: "Georgia", serif;
+}
+
+.menu-tab:hover,
+.menu-tab.active {
+  background: var(--restaurant-accent);
+  color: var(--restaurant-bg);
+  transform: scale(1.05);
+}
+
+.menu-category {
+  display: none;
+}
+
+.menu-category.active {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-item {
+  background: rgba(42, 26, 15, 0.6);
+  border: 2px solid var(--restaurant-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.menu-item:hover {
+  border-color: var(--restaurant-accent);
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+}
+
+.menu-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--restaurant-border);
+}
+
+.menu-details {
+  flex: 1;
+}
+
+.menu-details h3 {
+  color: var(--restaurant-accent);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Georgia", serif;
+}
+
+.menu-details p {
+  color: var(--restaurant-text-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.menu-details .price {
+  color: var(--restaurant-accent);
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+}
+
+/* Added offers grid styling */
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.offer-card {
+  background: rgba(42, 26, 15, 0.6);
+  border: 2px solid var(--restaurant-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+  position: relative;
+}
+
+.offer-card:hover {
+  border-color: var(--restaurant-accent);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(201, 169, 97, 0.3);
+}
+
+.offer-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--restaurant-accent);
+  color: var(--restaurant-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  z-index: 1;
+}
+
+.offer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.offer-card h3 {
+  color: var(--restaurant-accent);
+  padding: 1.5rem 1.5rem 0.5rem;
+  margin: 0;
+  font-size: 1.3rem;
+  font-family: "Georgia", serif;
+}
+
+.offer-card p {
+  color: var(--restaurant-text-light);
+  padding: 0 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.offer-time {
+  color: var(--restaurant-accent);
+  font-weight: 600;
+  padding: 0 1.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Added location search styling with proper grid */
+.location-search {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.location-input {
+  flex: 1;
+  min-width: 300px;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--restaurant-border);
+  border-radius: 8px;
+  background: var(--restaurant-bg);
+  color: var(--restaurant-text);
+  font-size: 1rem;
+  font-family: "Georgia", serif;
+}
+
+.location-input:focus {
+  outline: none;
+  border-color: var(--restaurant-accent);
+  box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2);
+}
+
+.location-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.location-card {
+  background: rgba(42, 26, 15, 0.6);
+  border: 2px solid var(--restaurant-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.location-card:hover {
+  border-color: var(--restaurant-accent);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(201, 169, 97, 0.3);
+}
+
+.location-card h3 {
+  color: var(--restaurant-accent);
+  margin-bottom: 0.75rem;
+  font-family: "Georgia", serif;
+}
+
+.location-card p {
+  color: var(--restaurant-text-light);
+  margin: 0.5rem 0;
+}
+
+.btn-small {
+  background: var(--restaurant-accent);
+  color: var(--restaurant-bg);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: var(--transition);
+}
+
+.btn-small:hover {
+  background: var(--restaurant-border);
+  transform: scale(1.05);
+}
+
 /* Carousel styles with brown buttons */
 .carousel-section {
   margin: 3rem 0;
@@ -545,6 +817,18 @@ body {
   transform: translateX(8px);
 }
 
+/* Updated timeline education card to have glow outline on hover */
+.timeline-education-card ul {
+  color: #a8d5e5;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.timeline-education-card ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
 .timeline-date {
   color: var(--primary-color);
   font-weight: 600;
@@ -720,6 +1004,97 @@ body {
   border-radius: 20px;
   font-size: 0.85rem;
   border: 1px solid #2d4a7b;
+}
+
+/* Added case study box styling for better layout */
+.case-study-box {
+  background: var(--bg-secondary);
+  border: 2px solid #2d4a7b;
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  transition: var(--transition);
+}
+
+.case-study-box:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 16px rgba(20, 184, 166, 0.2);
+}
+
+.case-study-box h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.case-study-box p {
+  color: #a8d5e5;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.case-study-box img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.result-item {
+  background: #1a3a52;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #2d4a7b;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.result-item:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.result-item h4 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-item p {
+  color: #a8d5e5;
+  font-size: 0.95rem;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.tech-tag {
+  background: #1a3a52;
+  color: var(--primary-color);
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  font-weight: 600;
+  border: 2px solid #2d4a7b;
+  transition: var(--transition);
+}
+
+.tech-tag:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
 }
 
 /* Competencies in single row */
