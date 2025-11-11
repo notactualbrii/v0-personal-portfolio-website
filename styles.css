@@ -1046,6 +1046,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Added all remaining case study and responsive styles */
 .design-concept-brief {
   background: #1a3a52;
   padding: 1.5rem;
@@ -1054,15 +1055,113 @@ body {
   border: 1px solid #2d4a7b;
 }
 
-.design-concept-brief h4 {
+.case-study-badge-container {
+  text-align: center;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #2d4a7b;
+}
+
+.portfolio-badge {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.case-study-intro {
+  color: #a8d5e5;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.my-role-box {
+  background: linear-gradient(135deg, var(--bg-secondary), #1a3a52);
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.role-item {
+  background: #0f2540;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #2d4a7b;
+  transition: var(--transition);
+}
+
+.role-item:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.role-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.role-item h4 {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-item p {
+  color: #a8d5e5;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.dashboard-visuals {
+  margin-top: 2rem;
+}
+
+.dashboard-visuals h4 {
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
-.design-concept-brief p {
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.visual-item img {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #2d4a7b;
+  margin-bottom: 0.5rem;
+}
+
+.visual-item p {
   color: #a8d5e5;
-  margin-bottom: 0.75rem;
-  line-height: 1.7;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.tech-category h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
 .restaurant-hero {
@@ -1111,59 +1210,6 @@ body {
   font-size: 1.8rem;
   color: var(--restaurant-text);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
-
-.book-table-popup {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, var(--restaurant-bg-secondary), var(--restaurant-bg));
-  border: 3px solid var(--restaurant-border);
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.5);
-  z-index: 1000;
-  max-width: 350px;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 0.5s ease;
-}
-
-.book-table-popup.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.popup-content {
-  position: relative;
-}
-
-.popup-close {
-  position: absolute;
-  top: -1rem;
-  right: -1rem;
-  background: var(--restaurant-accent);
-  color: var(--restaurant-bg);
-  border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.popup-content h3 {
-  color: var(--restaurant-accent);
-  font-family: "Georgia", serif;
-  margin-bottom: 0.5rem;
-}
-
-.popup-content p {
-  color: var(--restaurant-text-light);
-  margin-bottom: 1rem;
 }
 
 .restaurant-social-contact {
@@ -1218,7 +1264,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Changed social grid to single column layout */
 .social-grid {
   display: flex;
   flex-direction: column;
@@ -1259,6 +1304,15 @@ body {
   margin-top: 2rem;
 }
 
+.case-study-section {
+  margin: 3rem 0;
+}
+
+.case-study-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .case-study-box {
   background: var(--bg-secondary);
   border: 2px solid #2d4a7b;
@@ -1284,15 +1338,6 @@ body {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
-}
-
-.case-study-box img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
 }
 
 .results-grid {
@@ -1347,53 +1392,6 @@ body {
 .tech-tag:hover {
   border-color: var(--primary-color);
   transform: scale(1.05);
-}
-
-.competencies-section {
-  background: var(--bg-secondary);
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  border: 1px solid #2d4a7b;
-  margin: 3rem 0;
-}
-
-.competencies-section h2 {
-  font-size: 2rem;
-  color: var(--text-light-dark);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.competencies-grid-single-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.competency-box {
-  background: linear-gradient(135deg, #1a3a52, #0f2540);
-  padding: 2rem;
-  border-radius: 8px;
-  border: 2px solid #2d4a7b;
-  transition: var(--transition);
-}
-
-.competency-box:hover {
-  border-color: var(--primary-color);
-  box-shadow: 0 8px 16px rgba(20, 184, 166, 0.2);
-  transform: translateY(-5px);
-}
-
-.competency-box h4 {
-  color: var(--primary-color);
-  font-size: 1.2rem;
-  margin-bottom: 0.75rem;
-}
-
-.competency-box p {
-  color: #a8d5e5;
-  font-size: 0.95rem;
-  line-height: 1.6;
 }
 
 .learnings-section {
@@ -1481,11 +1479,6 @@ body {
   border-color: var(--primary-color);
   background: #1a3a52;
   color: var(--primary-color);
-}
-
-.social-icon-small {
-  width: 20px;
-  height: 20px;
 }
 
 .linkedin-profile-button {
@@ -1657,14 +1650,6 @@ body {
     font-size: 2.5rem;
   }
 
-  .hero-text-full .subtitle {
-    font-size: 1.2rem;
-  }
-
-  .hero-text-full .description {
-    font-size: 1rem;
-  }
-
   .project-card {
     grid-template-columns: 1fr;
   }
@@ -1685,10 +1670,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .competencies-grid-single-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .options-grid-single-row {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1697,23 +1678,23 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .timeline-wrapper {
-    padding-left: 40px;
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .visual-grid {
+    grid-template-columns: 1fr;
   }
 
   .restaurant-hero-content h1 {
     font-size: 3rem;
   }
 
-  .restaurant-hero-content p {
-    font-size: 1.2rem;
-  }
-
   .restaurant-contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .social-grid {
     grid-template-columns: 1fr;
   }
 
