@@ -320,9 +320,10 @@ body {
 
 .restaurant-showcase-container {
   border: 3px solid var(--restaurant-border);
-  border-radius: 16px;
+  border-radius: 0 0 16px 16px;
+  border-top: none;
   padding: 3rem;
-  margin: 3rem 0;
+  margin: 0 0 3rem 0;
   background: linear-gradient(135deg, var(--restaurant-bg-secondary) 0%, var(--restaurant-bg) 100%);
   position: relative;
   box-shadow: 0 8px 32px rgba(139, 69, 19, 0.3);
@@ -1071,8 +1072,8 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: 3rem;
-  border-radius: 12px;
+  margin-bottom: 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .restaurant-hero-bg {
@@ -1713,7 +1714,7 @@ body {
   }
 
   .social-grid {
-    grid-template-columns: 1fr; /* This was updated to flex in the main code, but needs to be changed here as well if the media query applies */
+    grid-template-columns: 1fr;
   }
 
   .booking-form-grid {
