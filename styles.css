@@ -1050,6 +1050,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Removed backslash and completed all missing styles */
 .design-concept-brief {
   background: #1a3a52;
   padding: 1.5rem;
@@ -1561,6 +1562,63 @@ body {
   box-shadow: 0 6px 12px rgba(20, 184, 166, 0.3);
 }
 
+.competencies-section {
+  margin: 3rem 0;
+}
+
+.competencies-box {
+  background: var(--bg-secondary);
+  border: 2px solid #2d4a7b;
+  border-radius: 12px;
+  padding: 2.5rem;
+  transition: var(--transition);
+}
+
+.competencies-box:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 16px rgba(20, 184, 166, 0.2);
+}
+
+.competencies-box h2 {
+  text-align: center;
+  color: var(--text-light-dark);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.competencies-grid-single-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.competency-box {
+  background: #1a3a52;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #2d4a7b;
+  transition: var(--transition);
+}
+
+.competency-box:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(20, 184, 166, 0.2);
+}
+
+.competency-box h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.competency-box p {
+  color: #a8d5e5;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .contact-section {
   margin: 3rem 0;
 }
@@ -1733,6 +1791,10 @@ body {
   }
 
   .options-grid-single-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .competencies-grid-single-row {
     grid-template-columns: repeat(2, 1fr);
   }
 
