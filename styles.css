@@ -1217,9 +1217,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* Changed social grid to single column layout */
 .social-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -1712,7 +1713,7 @@ body {
   }
 
   .social-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* This was updated to flex in the main code, but needs to be changed here as well if the media query applies */
   }
 
   .booking-form-grid {
