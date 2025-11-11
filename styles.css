@@ -1037,6 +1037,226 @@ body {
   border: 1px solid #2d4a7b;
 }
 
+/* Added styles for project description grid layout */
+.project-description-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.design-concept-brief {
+  background: #1a3a52;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  border: 1px solid #2d4a7b;
+}
+
+.design-concept-brief h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.design-concept-brief p {
+  color: #a8d5e5;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+
+.restaurant-hero {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+}
+
+.restaurant-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.restaurant-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.restaurant-hero-content h1 {
+  font-size: 5rem;
+  font-family: "Georgia", serif;
+  color: var(--restaurant-accent);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+}
+
+.restaurant-hero-content p {
+  font-size: 1.8rem;
+  color: var(--restaurant-text);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.book-table-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--restaurant-bg-secondary), var(--restaurant-bg));
+  border: 3px solid var(--restaurant-border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.5);
+  z-index: 1000;
+  max-width: 350px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+}
+
+.book-table-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.popup-content {
+  position: relative;
+}
+
+.popup-close {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background: var(--restaurant-accent);
+  color: var(--restaurant-bg);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content h3 {
+  color: var(--restaurant-accent);
+  font-family: "Georgia", serif;
+  margin-bottom: 0.5rem;
+}
+
+.popup-content p {
+  color: var(--restaurant-text-light);
+  margin-bottom: 1rem;
+}
+
+.restaurant-social-contact {
+  margin: 2rem 0;
+}
+
+.restaurant-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.restaurant-contact-info {
+  background: rgba(42, 26, 15, 0.6);
+  border: 2px solid var(--restaurant-border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.restaurant-contact-info h3 {
+  color: var(--restaurant-accent);
+  font-family: "Georgia", serif;
+  margin-bottom: 1.5rem;
+}
+
+.contact-item {
+  margin-bottom: 1.5rem;
+}
+
+.contact-item strong {
+  color: var(--restaurant-accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  color: var(--restaurant-text-light);
+  margin: 0;
+}
+
+.restaurant-social-links {
+  background: rgba(42, 26, 15, 0.6);
+  border: 2px solid var(--restaurant-border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.restaurant-social-links h3 {
+  color: var(--restaurant-accent);
+  font-family: "Georgia", serif;
+  margin-bottom: 1.5rem;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.restaurant-social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--restaurant-bg);
+  border: 2px solid var(--restaurant-border);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--restaurant-text);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.restaurant-social-btn:hover {
+  background: var(--restaurant-accent);
+  color: var(--restaurant-bg);
+  transform: translateY(-3px);
+}
+
+.restaurant-social-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.booking-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.restaurant-booking-form {
+  margin-top: 2rem;
+}
+
 .case-study-box {
   background: var(--bg-secondary);
   border: 2px solid #2d4a7b;
@@ -1268,7 +1488,7 @@ body {
 
 .linkedin-profile-button {
   display: inline-block;
-  background: var(--primary-color);
+  background: var(--primary-color) !important;
   color: white !important;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
@@ -1278,7 +1498,7 @@ body {
 }
 
 .linkedin-profile-button:hover {
-  background: var(--primary-dark);
+  background: var(--primary-dark) !important;
   color: white !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(20, 184, 166, 0.3);
@@ -1451,6 +1671,10 @@ body {
     direction: ltr;
   }
 
+  .project-description-grid {
+    grid-template-columns: 1fr;
+  }
+
   .contact-container-two-col {
     grid-template-columns: 1fr;
   }
@@ -1473,6 +1697,26 @@ body {
 
   .timeline-wrapper {
     padding-left: 40px;
+  }
+
+  .restaurant-hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .restaurant-hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .restaurant-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-form-grid {
+    grid-template-columns: 1fr;
   }
 }
 
