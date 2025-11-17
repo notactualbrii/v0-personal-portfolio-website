@@ -1,4 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+  
+  // Check for saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+    const sunIcon = themeToggle?.querySelector('.sun-icon');
+    const moonIcon = themeToggle?.querySelector('.moon-icon');
+    if (sunIcon) sunIcon.style.display = 'none';
+    if (moonIcon) moonIcon.style.display = 'block';
+  }
+  
+  // Toggle theme when button is clicked
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      body.classList.toggle('light-mode');
+      
+      const sunIcon = this.querySelector('.sun-icon');
+      const moonIcon = this.querySelector('.moon-icon');
+      
+      if (body.classList.contains('light-mode')) {
+        localStorage.setItem('theme', 'light');
+        if (sunIcon) sunIcon.style.display = 'none';
+        if (moonIcon) moonIcon.style.display = 'block';
+      } else {
+        localStorage.setItem('theme', 'dark');
+        if (sunIcon) sunIcon.style.display = 'block';
+        if (moonIcon) moonIcon.style.display = 'none';
+      }
+    });
+  }
+
   // Mobile Menu Toggle
   const hamburger = document.getElementById("hamburger")
   const navMenu = document.getElementById("navMenu")

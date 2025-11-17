@@ -28,6 +28,16 @@
   --restaurant-border: #c9a961;
 }
 
+/* Added light mode color variables */
+body.light-mode {
+  --bg-dark: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --text-light-dark: #222222;
+  --text-dark: #222222;
+  --accent-green: #0d9488;
+  --hover-bg: #e0e0e0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -128,6 +138,39 @@ body {
   height: 3px;
   background: var(--primary-color);
   border-radius: 2px;
+}
+
+/* Added theme toggle button styles */
+.theme-toggle {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.1);
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+}
+
+body.light-mode .sun-icon {
+  display: none;
+}
+
+body.light-mode .moon-icon {
+  display: block !important;
 }
 
 .main-content {
@@ -1497,6 +1540,43 @@ body {
   color: #a8d5e5;
   font-size: 1rem;
   line-height: 1.7;
+}
+
+/* Added solution features and impact styling */
+.solution-features,
+.solution-impact {
+  background: #1a3a52;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  border: 1px solid #2d4a7b;
+}
+
+.solution-features h4,
+.solution-impact h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.solution-features ul {
+  color: #a8d5e5;
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.solution-features li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.solution-features strong {
+  color: var(--primary-color);
+}
+
+.solution-impact p {
+  color: #a8d5e5;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .social-section {
