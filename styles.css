@@ -1270,6 +1270,78 @@ body.light-mode .moon-icon {
   box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
 }
 
+/* Added validation error message styles for form security */
+.validation-errors {
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid #ef4444;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  animation: slideDown 0.3s ease;
+}
+
+.validation-errors ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: #ef4444;
+  list-style: disc;
+}
+
+.validation-errors li {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Light mode validation errors */
+body.light-mode .validation-errors {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: #dc2626;
+}
+
+body.light-mode .validation-errors ul {
+  color: #dc2626;
+}
+
+/* Form input validation states */
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+  border-color: #ef4444;
+}
+
+.form-group input.error:focus,
+.form-group textarea.error:focus,
+.form-group select.error:focus {
+  outline: none;
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.form-group input.success,
+.form-group textarea.success,
+.form-group select.success {
+  border-color: var(--success-color);
+}
+
+/* Rate limit message styling */
+.rate-limit-message {
+  background: rgba(251, 191, 36, 0.1);
+  border: 2px solid #f59e0b;
+  color: #f59e0b;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+body.light-mode .rate-limit-message {
+  background: rgba(251, 191, 36, 0.15);
+  border-color: #d97706;
+  color: #d97706;
+}
+
 .social-section {
   margin: 3rem 0;
   text-align: center;
@@ -1745,6 +1817,96 @@ body.light-mode .moon-icon {
   color: var(--primary-color);
 }
 
+/* Privacy Policy Page Styles */
+.privacy-policy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #e0e7ff;
+}
+
+.privacy-policy-container h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.privacy-policy-container .last-updated {
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.policy-section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(45, 74, 123, 0.3);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.policy-section h2 {
+  color: var(--accent-green);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.policy-section h3 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.policy-section p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #cbd5e1;
+}
+
+.policy-section ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.policy-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.policy-section strong {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+.policy-section a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.policy-section a:hover {
+  color: var(--accent-green);
+}
+
+.policy-consent {
+  background: linear-gradient(135deg, rgba(45, 74, 123, 0.5), rgba(74, 192, 179, 0.2));
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid var(--primary-color);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.policy-consent p {
+  font-size: 1.1rem;
+  color: var(--accent-green);
+  margin: 0;
+}
+
 .footer {
   background: var(--bg-secondary);
   border-top: 1px solid #2d4a7b;
@@ -2002,6 +2164,26 @@ body.light-mode .moon-icon {
   .cookie-btn {
     width: 100%;
   }
+
+  .privacy-policy-container {
+    padding: 1rem;
+  }
+
+  .privacy-policy-container h1 {
+    font-size: 2rem;
+  }
+
+  .policy-section {
+    padding: 1rem;
+  }
+
+  .policy-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .policy-section h3 {
+    font-size: 1.2rem;
+  }
 }
 
 @keyframes fadeIn {
@@ -2033,5 +2215,16 @@ body.light-mode .moon-icon {
   }
   50% {
     opacity: 0.8;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
