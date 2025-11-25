@@ -549,30 +549,67 @@
         </div>
     </div>
 
-    <!-- Updated footer with FAQ, Privacy, and Terms -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Briana Gheorghe. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/brianagheorghe512" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="mailto:gheorghebriana5@gmail.com">Email</a>
-                <a href="contact.html">Contact</a>
-                <a href="#" onclick="alert('FAQ page coming soon')">FAQ</a>
-                <a href="#" onclick="alert('Privacy Notice: Your data is secure and never shared.')">Privacy Notice</a>
-                <a href="#" onclick="alert('Terms & Conditions apply to all portfolio content.')">Terms & Conditions</a>
+    <!-- Added cookie consent banner before closing body tag -->
+    <div id="cookieConsent" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3>Cookie Settings</h3>
+                <p>We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. Choose your preferences below.</p>
+            </div>
+            <div class="cookie-preferences">
+                <label class="cookie-option">
+                    <input type="checkbox" id="essentialCookies" checked disabled>
+                    <span class="cookie-label">
+                        <strong>Essential</strong>
+                        <small>Required for site functionality</small>
+                    </span>
+                </label>
+                <label class="cookie-option">
+                    <input type="checkbox" id="analyticsCookies">
+                    <span class="cookie-label">
+                        <strong>Analytics</strong>
+                        <small>Help us improve the website</small>
+                    </span>
+                </label>
+                <label class="cookie-option">
+                    <input type="checkbox" id="marketingCookies">
+                    <span class="cookie-label">
+                        <strong>Marketing</strong>
+                        <small>Personalized content and ads</small>
+                    </span>
+                </label>
+            </div>
+            <div class="cookie-buttons">
+                <button id="acceptAll" class="cookie-btn btn-accept">Accept All</button>
+                <button id="acceptSelected" class="cookie-btn btn-selected">Save Preferences</button>
+                <button id="rejectAll" class="cookie-btn btn-reject">Reject Optional</button>
             </div>
         </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
     <script>
-        // Show booking popup after 3 seconds
+        // Restaurant booking popup functionality
         setTimeout(() => {
-            document.getElementById('bookTablePopup').classList.add('show');
+            const popup = document.getElementById('bookTablePopup');
+            if (popup) {
+                popup.classList.add('show');
+            }
         }, 3000);
 
         function closeBookingPopup() {
-            document.getElementById('bookTablePopup').classList.remove('show');
+            const popup = document.getElementById('bookTablePopup');
+            if (popup) {
+                popup.classList.remove('show');
+            }
+        }
+
+        function bookTableFromPopup() {
+            closeBookingPopup();
+            const bookingSection = document.getElementById('booking');
+            if (bookingSection) {
+                bookingSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
         // Toggle theme function

@@ -1,35 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
-  
+  const themeToggle = document.getElementById("themeToggle")
+  const body = document.body
+
   // Check for saved theme preference
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    body.classList.add('light-mode');
-    const sunIcon = themeToggle?.querySelector('.sun-icon');
-    const moonIcon = themeToggle?.querySelector('.moon-icon');
-    if (sunIcon) sunIcon.style.display = 'none';
-    if (moonIcon) moonIcon.style.display = 'block';
+  const savedTheme = localStorage.getItem("theme")
+  if (savedTheme === "light") {
+    body.classList.add("light-mode")
+    const sunIcon = themeToggle?.querySelector(".sun-icon")
+    const moonIcon = themeToggle?.querySelector(".moon-icon")
+    if (sunIcon) sunIcon.style.display = "none"
+    if (moonIcon) moonIcon.style.display = "block"
   }
-  
+
   // Toggle theme when button is clicked
   if (themeToggle) {
-    themeToggle.addEventListener('click', function() {
-      body.classList.toggle('light-mode');
-      
-      const sunIcon = this.querySelector('.sun-icon');
-      const moonIcon = this.querySelector('.moon-icon');
-      
-      if (body.classList.contains('light-mode')) {
-        localStorage.setItem('theme', 'light');
-        if (sunIcon) sunIcon.style.display = 'none';
-        if (moonIcon) moonIcon.style.display = 'block';
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("light-mode")
+
+      const sunIcon = this.querySelector(".sun-icon")
+      const moonIcon = this.querySelector(".moon-icon")
+
+      if (body.classList.contains("light-mode")) {
+        localStorage.setItem("theme", "light")
+        if (sunIcon) sunIcon.style.display = "none"
+        if (moonIcon) moonIcon.style.display = "block"
       } else {
-        localStorage.setItem('theme', 'dark');
-        if (sunIcon) sunIcon.style.display = 'block';
-        if (moonIcon) moonIcon.style.display = 'none';
+        localStorage.setItem("theme", "dark")
+        if (sunIcon) sunIcon.style.display = "block"
+        if (moonIcon) moonIcon.style.display = "none"
       }
-    });
+    })
   }
 
   // Mobile Menu Toggle
@@ -325,4 +325,76 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   })
+
+  // Cookie Consent Banner Functionality
+  const cookieBanner = document.getElementById("cookieConsent")
+  const acceptAllBtn = document.getElementById("acceptAll")
+  const acceptSelectedBtn = document.getElementById("acceptSelected")
+  const rejectAllBtn = document.getElementById("rejectAll")
+  const analyticsCookies = document.getElementById("analyticsCookies")
+  const marketingCookies = document.getElementById("marketingCookies")
+
+  // Check if user has already made a choice
+  const cookieConsent = localStorage.getItem("cookieConsent")
+
+  if (!cookieConsent && cookieBanner) {
+    // Show banner after a short delay
+    setTimeout(() => {
+      cookieBanner.classList.add("show")
+    }, 1000)
+  }
+
+  // Accept all cookies
+  if (acceptAllBtn) {
+    acceptAllBtn.addEventListener("click", () => {
+      const preferences = {
+        essential: true,
+        analytics: true,
+        marketing: true,
+        timestamp: new Date().toISOString(),
+      }
+      localStorage.setItem("cookieConsent", JSON.stringify(preferences))
+      hideCookieBanner()
+      console.log("[v0] All cookies accepted")
+    })
+  }
+
+  // Accept selected cookies
+  if (acceptSelectedBtn) {
+    acceptSelectedBtn.addEventListener("click", () => {
+      const preferences = {
+        essential: true,
+        analytics: analyticsCookies ? analyticsCookies.checked : false,
+        marketing: marketingCookies ? marketingCookies.checked : false,
+        timestamp: new Date().toISOString(),
+      }
+      localStorage.setItem("cookieConsent", JSON.stringify(preferences))
+      hideCookieBanner()
+      console.log("[v0] Selected cookie preferences saved:", preferences)
+    })
+  }
+
+  // Reject optional cookies
+  if (rejectAllBtn) {
+    rejectAllBtn.addEventListener("click", () => {
+      const preferences = {
+        essential: true,
+        analytics: false,
+        marketing: false,
+        timestamp: new Date().toISOString(),
+      }
+      localStorage.setItem("cookieConsent", JSON.stringify(preferences))
+      hideCookieBanner()
+      console.log("[v0] Only essential cookies accepted")
+    })
+  }
+
+  function hideCookieBanner() {
+    if (cookieBanner) {
+      cookieBanner.classList.remove("show")
+      setTimeout(() => {
+        cookieBanner.style.display = "none"
+      }, 400)
+    }
+  }
 })
